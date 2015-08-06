@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>OS EDU</title>
+
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="styles/custom.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Open Sourse Education</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><input id="email" placeholder="email"></li>
+                        <li><input id="password" placeholder="password">
+                        <li class="homepage"><a href="index.html">Home</a></li>
+                        <button id="register">Register</button>
+                        <button id="login">Sign in</button>
+                    </ul>
+                    <p class="nav navbar-nav navbar-right">
+                        Because Education shouldn't cost you anything but time and effort
+                    </p>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main container-fluid">
+            <div class="content col-md-8 col-md-push-2">
+                <p class="lead">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+            <div class="left col-md-2 col-md-pull-8">
+                <ol>
+                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                    <li>Aliquam tincidunt mauris eu risus.</li>
+                    <li>Vestibulum auctor dapibus neque.</li>
+                </ol>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+            <div class="right col-md-2">
+                <ul>
+                    <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+                    <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+                    <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+                    <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">Place sticky footer content here.</p>
+            </div>
+        </footer>
+
+        <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+    </body>
+</html><!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>Mock Front End Project2</title>
+    </head>
+    <body>
+
+        <h2>User</h2>
+        <div>
+
+            <input id="user-id" placeholder="user-id">
+            <input id="email" placeholder="email">
+            <input id="password" placeholder="password">
+            <input id="password_confirmation" placeholder="password_confirmation">
+            <button id="register">Register</button>
+            <button id="login">Sign in</button>
+            <button id="delete-user">Delete Account</button>
+        </div>
+
+        <h2>Teachers</h2>
+        <div>
+            <input id="teacher-id" placeholder="teacher-id">
+            <input id="teacher-username" placeholder="username">
+            <input id="teacher-school-id" placeholder="school id">
+            <input id='teacher-lesson-plan-id' placeholder='lesson_plan_id'>
+            <input id= "teacher-user-id" placeholder='teachers user id'>
+            <button id="teacher-create">Create</button>
+            <button id="teacher-update">Update</button>
+
+        </div>
+
+        <h2>Schools</h2>
+        <div>
+            <input id="school-id" placeholder="school-id">
+            <input id="school-name" placeholder="school name">
+            <input id="grade-level" placeholder='grades taught at school'>
+            <input id="teacher-id" placeholder='teaher id'>
+            <button id="school-create">What school do you teach at?</button>
+            <button id="school-update">Update Your School</button>
+        </div>
+
+        <h2>Lesson Plan</h2>
+        <div>
+            <input id="lessonplan-id" placeholder="id">
+            <input id="lessonplan-name" placeholder="name">
+            <input id="lessonplan-person-id" placeholder="person-id">
+            <input id="lessonplan-movie-id" placeholder="movie-id">
+            <button id="lessonplan-create">Create</button>
+            <button id="lessonplan-update">Update</button>
+            <button id="lessonplan-destroy">Destroy</button>
+        </div>
+
+        <h2>Subject</h2>
+        <div>
+        <ul id="subject-read">
+            <li>
+            @subjects
+            </li>
+        </ul>
+
+
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+</html>
+ -->
