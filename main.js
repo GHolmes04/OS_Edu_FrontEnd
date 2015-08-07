@@ -23,7 +23,7 @@ $(function(){
       method: 'POST'
     }).done(function(data, textStatus, jqxhr) {
       $('#result').val(JSON.stringify(data));
-        console.log('Ballin, Bitches, Eating yall food leaving dishes');
+        console.log('Hey! You did it! Congrats! Now go do another');
         user_id = data.id
     }).fail(function(jqxhr, textStatus, errorThrown) {
       $('#result').val('registration failed');
@@ -88,7 +88,7 @@ $(function(){
       $("#teacher-id").val(data.id);
       $("#teacher-user-id").val(data.user_id)
 
-        console.log('Ballin, Bitches, Eating yall food leaving dishes');
+        console.log('Hey! You did it! Congrats! Now go do another');
     }).fail(function(jqxhr, textStatus, errorThrown) {
       $('#result').val('registration failed');
          console.log(textStatus);
@@ -136,7 +136,7 @@ $("#teacher-update").on('click', function(){
 //   //     }
 //   //   }).done(function(data){
 //   //     $("#result").val(JSON.stringify(data));
-//   //       console.log('Ballin, Bitches, Eating yall food leaving dishes');
+//   //       console.log('Hey! You did it! Congrats! Now go do another');
 //   //   }).fail(function(){
 //   //     $("#result").val('list failed');
 //   //   });
@@ -168,3 +168,5 @@ $("#school-create").on("click", function(e) {
        .always();
    });
 });
+
+
