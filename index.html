@@ -10,7 +10,7 @@
         <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="styles/style.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 
     </head>
     <body>
@@ -21,11 +21,14 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
+                        <li><input id="user-id" type="hidden" placeholder="user-id">
                         <li><input id="email" placeholder="email"></li>
                         <li><input id="password" placeholder="password"></li>
                         <li><input id="password_confirmation" placeholder="confirm password"</li>
                         <button id="register">Register</button>
                         <button id="login">Sign in</button>
+                        <button id="delete-user">Delete Account</button>
+
                     </ul>
                     <p class="nav navbar-nav navbar-right">
                         Because Education shouldn't cost you anything but time and effort
@@ -36,57 +39,58 @@
 
         <div class="maincontainer-fluid">
             <div class="content col-md-8 col-md-push-2">
-                <div class="lead"><button id="lessonplan-create">Create a new lesson plan</button>
-
-
+                <div class="lead">
+                    <button id="lessonplan-create">Create a new lesson plan</button>
                 </div>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <div class="teacher-info">
+                    <input id="teacher-username" placeholder="username">
+                    <input id="teacher-school-id" placeholder="school id">
+                    <input id='teacher-lesson-plan-id' placeholder='lesson_plan_id'>
+                    <input id= "teacher-user-id" placeholder='teachers user id'>
+                    <button id="teacher-create">Complete</button>
+                    <button id="teacher-update">Update</button>
+                </div>
             </div>
-
             <div class="left col-md-2 col-md-pull-8">
-                <ol>
-                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                    <li>Aliquam tincidunt mauris eu risus.</li>
-                    <li>Vestibulum auctor dapibus neque.</li>
-                </ol>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <div class="schools-sidebar">
+                    <H2> Schools </H2>
+                    <ul id="schools-list">
+                <!-- School HandleBars -->
+                    </ul>
+                </div>
             </div>
-
             <div class="right col-md-2">
-                <ul>
-                    <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-                    <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-                    <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-                    <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+                <H2> Subjects </H2>
+                <ul id="subjects-list">
+                    <!-- This is where I need to put my Subjects handlebar to show a list of links to all the subjects which will show all the lesson plans in the clicked subjects! -->
                 </ul>
             </div>
         </div>
 
-        <footer class="footer">
-            <div class="container">
-                <p class="text-muted">Place sticky footer content here.</p>
-            </div>
-        </footer>
 
-        <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
 
-    </body>
+        <!--Templates-->
+        <script id="list-template" type="text/x-handlebars-template">
+            {{#each schools}}
+                <li><h2><a href="{{this.href}}">{{this.name}}</a></h4></li>
+            {{/each}}
+        </script>
+
+        <script id="list-template-subjects" type="text/x-handlebars-template">
+            {{#each subjects}}
+                <li><h2><a href="{{this.href}}">{{this.name}}</a></h4></li>
+            {{/each}}
+        </script>
+
+
+
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="handlebars-client-08/assets/handlebars-v3.0.3.js"></script>
+        <script src="view.js" type="application/javascript"></script>
+        <script src="main.js" type="application/javascript"></script>
+
+            </body>
 
 
 
@@ -157,6 +161,8 @@
 
 
         </div>
+
+
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="main.js"></script>
